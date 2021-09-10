@@ -1,0 +1,25 @@
+h1{
+    text-align: center;
+  background-color: grey;
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.col-md-12{
+            padding-top: 20px;
+            padding-bottom: 40px;
+            background-color: white;
+}
+
+img{
+    height: 100%;
+    weight: 100%;
+}
