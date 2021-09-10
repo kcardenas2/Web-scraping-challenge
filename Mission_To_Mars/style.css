@@ -1,16 +1,20 @@
-h1{
+h1.display-3 {
     text-align: center;
-  background-color: grey;
+    color:black;
+    font-size: 80px;
+}
+#scrape_btn { 
+    text-align: center;
 }
 .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    background:  lightgray;
+    padding: 3%;
 }
-*, ::after, ::before {
-    box-sizing: border-box;
+.card{
+    background: gray;
+    outline: .1px double black;
+    padding: 5%;
+    text-align: right;
 }
 
 .col-md-12{
@@ -19,7 +23,7 @@ h1{
             background-color: white;
 }
 
-img{
+.img-thumbnail{
     height: 100%;
     weight: 100%;
 }
