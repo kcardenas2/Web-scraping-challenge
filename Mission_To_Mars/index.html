@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang='en'
+<html lang='en'>
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0"
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Mission to Mars</title>
     <link rel="stylesheet" href="https://maxcdm.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
 </head>
 
 <body>
-    <div class="container">
-        <div class="jumbotron text-center border-bottom">
-          <h1>Mission To Mars</h1>
-          <a class="btn btn-primary btn-lg" href="#" role="button"> Scrape New Data</a>
-      </div>
+  <div class="container">
+  <div class="jumbotron text-center" style="background-image: url(https://redplanetscience.com/); height: 400px; background-position: center; background-size: cover;">
+    <h1 class="display-3"><b>Mission to Mars</b></h1>
+    <p><a href="../scrape" id="scrape_btn" class="btn btn-primary btn-lg" role="button">Scrape New Data</a></p>
+    
+</div>
       </div>
       <div class="row">
         <div class="col-md-12">
           <h2><strong> Latest Mars News</strong></h2>
-           <h4><strong>{{mars_df.news_title}}</strong></h4> 
-          <p>{{mars_df.news_p}}</p>
+           <h4><strong>{{mars.news_title}}</strong></h4> 
+          <p>{{mars.news_p}}</p>
         </div>
       </div>
       <hr>
@@ -34,7 +37,7 @@
           </br>
           <div class="card">
             <h3>Mars Facts</h3>
-              {{mars.mars_html | safe}}
+              {{mars_df.mars_df}}
           </div>
         </div>
       </div>
@@ -42,29 +45,26 @@
       <hr>
       <div class="row">
         <div class="col-md-8 offset-4">
-          <h2 class="align-items-center"><u>Mars hemispheres</u></h2>  
-        </div>
-      </div>
-      </br>
-      <div class="row">       
-              {% for hem in mars.hemisphere_urls %} 
-                <div class="col-6 border">
-                </br>
-                      <div>
-                        <img width="300 px" height="300 px" src="{{hem.image_url}}">
-                      </div>
+          <h2 class="align-items-center"><u>Mars Hemispheres</u</h2>
     
-                      <div>
-                        <h4> {{hem.title}} </h4>  
-                      </div>
-              
-                </div>
-              {% endfor %}
+    <div class="row">
+      <div class="container">
+      {% for hemi in mars_data.mar_hemispheres %}
+      <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <img src="{{hemi.image_url}}" class="img-thumbnail" >
+          <h5 class="card-title"><strong>{{hemi.title}}</strong></h5>
+        </div>  
+      </div>
+      </div>
+      {% endfor %}
       </div> 
     
     <hr>
     
-      
+        
+
     </body>
     
     </html>
