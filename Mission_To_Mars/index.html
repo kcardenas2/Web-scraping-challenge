@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0"
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Mission to Mars</title>
+    <link rel="stylesheet" href="https://maxcdm.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center border-bottom">
+          <h1>Mission To Mars</h1>
+          <a class="btn btn-primary btn-lg" href="#" role="button"> Scrape New Data</a>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2><strong> Latest Mars News</strong></h2>
+           <h4><strong>{{mars_df.news_title}}</strong></h4> 
+          <p>{{mars_df.news_p}}</p>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-8 border">
+          <h3 class=""><u>Featured Mars Image</u></h3> 
+          </br>
+          <img src="{{featured_image_url}}" alt="Featured Mars Image">
+        </div>
+        <div class="col-md-4">
+          </br>
+          <div class="card">
+            <h3>Mars Facts</h3>
+              {{mars.mars_html | safe}}
+          </div>
+        </div>
+      </div>
+      </div> 
+      <hr>
+      <div class="row">
+        <div class="col-md-8 offset-4">
+          <h2 class="align-items-center"><u>Mars hemispheres</u></h2>  
+        </div>
+      </div>
+      </br>
+      <div class="row">       
+              {% for hem in mars.hemisphere_urls %} 
+                <div class="col-6 border">
+                </br>
+                      <div>
+                        <img width="300 px" height="300 px" src="{{hem.image_url}}">
+                      </div>
+    
+                      <div>
+                        <h4> {{hem.title}} </h4>  
+                      </div>
+              
+                </div>
+              {% endfor %}
+      </div> 
+    
+    <hr>
+    
+      
+    </body>
+    
+    </html>
