@@ -1,7 +1,9 @@
 # Web-scraping-challenge
+![Screenshot (20)](https://user-images.githubusercontent.com/85724967/148304503-76a0f03e-5112-4656-8ed7-f421e74712aa.png)
+
 In this assignment, you will build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines what you need to do.
 
-Before You Begin
+# Before You Begin
 
 
 Create a new repository for this project called web-scraping-challenge. Do not add this homework to an existing repository.
@@ -20,7 +22,7 @@ Push the above changes to GitHub or GitLab.
 
 
 
-Step 1 - Scraping
+# Step 1 - Scraping
 Complete your initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
 
 Create a Jupyter Notebook file called mission_to_mars.ipynb and use this to complete all of your scraping and analysis tasks. The following outlines what you need to scrape.
@@ -87,7 +89,7 @@ hemisphere_image_urls = [
 ]
 
 
-Step 2 - MongoDB and Flask Application
+# Step 2 - MongoDB and Flask Application
 Use MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
 
 
@@ -104,3 +106,38 @@ Create a root route / that will query your Mongo database and pass the mars data
 
 
 Create a template HTML file called index.html that will take the mars data dictionary and display all of the data in the appropriate HTML elements. Use the following as a guide for what the final product should look like, but feel free to create your own design
+![Screenshot (21)](https://user-images.githubusercontent.com/85724967/148304511-39841322-f8ec-486b-8c5a-2332db898912.png)
+# Step 3 - Submission
+To submit your work to BootCampSpot, create a new GitHub repository and upload the following:
+
+
+The Jupyter Notebook containing the scraping code used.
+
+
+Screenshots of your final application.
+
+
+Submit the link to your new repository to BootCampSpot.
+
+
+Ensure your repository has regular commits and a thorough README.md file
+
+
+
+# Hints
+
+
+Use Splinter to navigate the sites when needed and BeautifulSoup to help find and parse out the necessary data.
+
+
+Use Pymongo for CRUD applications for your database. For this homework, you can simply overwrite the existing document each time the /scrape url is visited and new data is obtained.
+
+
+Use Bootstrap to structure your HTML template.
+
+
+
+# Rubric
+Unit 12 Rubric - Web Scraping Homework - Mission to Mars
+
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
